@@ -1,0 +1,89 @@
+.section_three{
+    padding: 100px 0 50px 0;
+}
+.section_four{
+    padding: 50px 0;
+}
+.section_five{
+    padding: 50px 0 100px 0;
+}
+.management{
+    @include flex-items;
+    justify-content: space-between;
+    gap: 40px;
+    &_text{
+        max-width: 480px;
+        h5{
+            font-size: 16px;
+            color: $text-color;
+            line-height: 24px;
+            margin-bottom: 12px;
+        }
+        h2{
+            font-size: 32px;
+            color: $text-color;
+            margin-bottom: 24px;
+        }
+        p{
+            margin-bottom: 30px;
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
+    &_img{
+        max-width: 540px;
+        img{
+            width: 100%;
+        }
+    }
+    .checkbox_text{
+        @include flex-items;
+        gap: 30px;
+        margin: 30px 0;
+        p{
+            line-height: 24px;
+            margin: 0;
+        }
+    }
+}
+
+@include for-large-tablet{
+    .management{
+        flex-direction: column;
+        &_text{
+            order: -5;
+            max-width: 650px;
+            @include flex-items;
+            justify-content: center;
+            flex-direction: column;
+            h5, h2, p{
+                text-align: center;
+            }
+        }
+    }
+    .checkbox_text{
+        flex-direction: column;
+        gap: 10px !important;
+    }
+}
+@include for-tablet{
+    .management{
+        &_text{
+            max-width: 520px;
+        }
+    }
+}
+
+@include for-large-mobile{
+    .management{
+        &_text{
+            max-width: 370px;
+            h2{
+                font-size: 28px;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+}

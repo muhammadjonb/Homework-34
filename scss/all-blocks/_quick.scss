@@ -1,0 +1,82 @@
+.section_six{
+    padding: 50px 0;
+    background-image: url(../images/icons/Bg_2.svg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+.quick{
+    @include flex-items;
+    flex-direction: column;
+    padding-top: 20px;
+    h2{
+        font-size: 32px;
+        color: $text-color;
+    }
+    & > p{
+        max-width: 540px;
+        font-size: 16px;
+        text-align: center;
+        line-height: 26px;
+        margin-top: 20px;
+    }
+    &_process{
+        @include flex-items;
+        justify-content: space-around;        
+        flex-wrap: wrap;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        gap: 24px
+    }
+    &_proces{
+        @include flex-items;
+        max-width: 395px;
+        width: 100%;
+        gap: 16px;
+        span{
+            background-image: url(../images/icons/Combined\ Shape\ \(1\).svg);
+            background-size: contain;
+            background-position: bottom center;
+            background-repeat: no-repeat;
+            padding: 20px 20px 30px 20px;
+            font-size: 16px;
+            @include flex-items;
+            justify-content: center;
+        }
+    }
+    &_proces:nth-child(1){
+        @include flex-items;
+        max-width: 395px;
+        width: 100%;
+        gap: 16px;
+        span{
+            background-image: url(../../images/icons/Combined\ Shape.svg);
+            background-size: contain;
+            background-position: bottom center;
+            background-repeat: no-repeat;
+            padding: 20px 20px 30px 20px;
+            font-size: 16px;
+            @include flex-items;
+            justify-content: center;
+        }
+    }
+}
+
+@include for-large-mobile {
+    .quick{
+        h2{
+            font-size: 28px;
+        }
+        p{
+            max-width: 370px;
+            font-size: 14px;
+        }
+        &_proces{
+            max-width: 340px;
+            span{
+                font-size: 13px !important;
+                padding: 15px 15px 20px 15px !important;
+            }
+        }
+    }
+}

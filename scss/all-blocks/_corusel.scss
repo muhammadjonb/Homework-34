@@ -1,0 +1,61 @@
+.corusel{
+    width: 100%;
+    h2{
+        font-size: 32px;
+        color: $text-color;
+        line-height: 42px;
+    }
+    p{
+        font-size: 16px;
+        line-height: 25px;
+        color: $text-color;
+        margin-top: 12px;
+        margin-bottom: 32px;
+    }
+    &_card{
+        max-width: 340px;
+        border: 1px solid #DEDEDE;
+        border-radius: 8px;
+        img{
+            width: 100%;
+        }
+        &:hover{
+            background-color: #d3d3d3;
+        }
+    }
+    &_text{
+        padding: 24px;
+        span{
+            font-weight: 700;
+        }
+        h3{
+            font-size: 24px;
+            line-height: 40px;
+        }
+    }
+    &_card:hover > &_text *{
+        color: $primery-color !important;
+    }
+}
+@include for-large-tablet{
+    .corusel{
+        width: 100%;
+        @include flex-items;
+        justify-content: center;
+        flex-direction: column;
+        h2{
+            text-align: center;
+        }
+        & > p{
+            text-align: center;
+        }
+    }
+}
+@include for-large-mobile{
+    .corusel {
+        width: 100%;
+        h2{
+            font-size: 28px;
+        }
+    }
+}

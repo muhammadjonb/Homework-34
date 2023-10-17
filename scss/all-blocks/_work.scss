@@ -1,0 +1,102 @@
+.work{
+    @include flex-items;
+    justify-content: space-between;
+    &_text{
+        max-width: 470px;        
+        h1{
+            width: 100%;
+            font-size: 40px;
+            line-height: 56px;
+            font-weight: 700;
+            color: $text-color;
+        }
+        p{
+            font-size: 18px;
+            line-height: 28px;
+            color: $text-color;
+            font-weight: 400;
+            margin: 18px 0 45px 0;
+        }
+    }
+    &_btns{
+        @include flex-items;
+        gap: 30px;
+    }
+    &_btn{
+        border: none;
+        background-color: transparent;
+        @include flex-items;
+        gap: 10px;
+        a{
+            color: $primery-color;
+            text-decoration: underline;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+        }
+    }
+    .triangle{
+        fill: $primery-color;
+    }
+    &_img{
+        max-width: triangle;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+@include for-large-tablet{
+    .work{
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+        &_text{
+            @include flex-items;
+            flex-direction: column;
+            max-width: 750px;
+            h1{
+                text-align: center;
+                width: 60%;
+            }
+            p{
+                text-align: center;
+            }
+        }
+    }
+}
+
+@include for-tablet{
+    .work{
+        &_text{
+            max-width: 550px;
+            font-size: 32px;
+            h1{
+                line-height: 42px;
+                width: 80%;
+            }
+            p{
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+@include for-large-mobile{
+    .work{
+        &_text{
+            max-width: 460px;
+            h1{
+                font-size: 28px;
+                line-height: 32px;
+            }
+            p{
+                margin: 16px 0 36px 0;
+            }
+        }
+        &_btns{
+            gap: 16px;
+        }
+    }
+}

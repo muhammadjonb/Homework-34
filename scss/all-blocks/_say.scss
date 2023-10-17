@@ -1,0 +1,84 @@
+.section_eight{
+    padding: 50px 0;
+}
+.say{
+    width: 100%;
+    @include flex-items;
+    justify-content: center;
+    flex-direction: column;
+    h2{
+        font-size: 32px;
+        line-height: 56px;
+        color: $text-color;
+        text-align: center;
+    }
+    & > p{
+        color: $text-color;
+        font-size: 16px;
+        line-height: 32px;
+        max-width: 520px;
+        text-align: center;
+    }
+    &_cards{
+        margin-top: 40px;
+        @include flex-items;        
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+    &_card{
+        max-width: 327px;
+        border-radius: 5px;
+        border: 1px solid #DEDEDE;
+        padding: 28px;
+        img{
+            width: 105px;
+        }
+        p{
+            font-size: 16px;
+            line-height: 26px;
+            color: $second_text-color;
+            margin: 16px 0;
+        }
+    }
+    &_block{
+        @include flex-items;
+        gap: 14px;
+        img{
+            width: 50px;
+            height: 50px;
+        }
+        h4{
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            color: $primery-color;
+            font-size: 16px;
+            span{
+                font-size: 14px;
+                line-height: 24px;
+                font-weight: 400;
+                color: $text-color;
+            }
+        }
+    }
+}
+
+@include for-large-desktop{
+    .say{
+        &_cards{
+            justify-content: space-around;
+            gap: 40px 32px;
+        }
+    }
+}
+@include for-large-mobile{
+    .say{
+        h2{
+            font-size: 28px;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+}

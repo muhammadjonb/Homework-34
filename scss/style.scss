@@ -1,0 +1,47 @@
+@import './fonts';
+@import './varibles';
+@import './mixins';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+body, html{
+    font-family: 'Poppins';
+    overflow-x: hidden;
+}
+a{text-decoration: none;}
+button{cursor: pointer;}
+li{list-style: none;}
+
+.container{
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+main{
+    padding-top: 90px; 
+}
+section{
+    padding: 30px 0;
+}
+
+@import './all-blocks/header';
+@import './all-blocks/work';
+@import './all-blocks/product';
+@import './all-blocks/management';
+@import './all-blocks/quick';
+@import './all-blocks/corusel';
+@import './all-blocks/table';
+@import './all-blocks/say';
+@import './all-blocks/last';
+
+@import './all-blocks/footer';
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev{
+    display: none !important;
+}
+@import './all-blocks/light-dark';
